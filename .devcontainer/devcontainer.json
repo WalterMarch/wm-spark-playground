@@ -1,0 +1,28 @@
+{
+	"name": "wm-spark-playground",
+
+	"build": {"dockerfile": "Dockerfile"},
+	"features": {
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/spark/.ssh,type=bind"
+	],
+	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh ${containerWorkspaceFolder}",
+	"customizations": {
+		"vscode": {
+			"editor.trimAutoWhitespace": true,
+			"files.autoSave": "off",
+			"extensions": [
+				"DavidAnson.vscode-markdownlint",
+				"eamodio.gitlens",
+				"mathematic.vscode-pdf",
+				"ms-azuretools.vscode-docker",
+				"streetsidesoftware.code-spell-checker",
+				"scalameta.metals",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-mysql"
+			]
+		}
+	}
+}
