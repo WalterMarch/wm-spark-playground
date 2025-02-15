@@ -11,17 +11,26 @@
 	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/post-create.sh ${containerWorkspaceFolder}",
 	"customizations": {
 		"vscode": {
+			"settings" : {"editor.rulers": [72, 79],
 			"editor.trimAutoWhitespace": true,
 			"files.autoSave": "off",
+			"[python]": {
+				"editor.defaultFormatter": "ms-python.black-formatter",
+				"editor.formatOnSave": true
+			}
+		},			
 			"extensions": [
 				"DavidAnson.vscode-markdownlint",
 				"eamodio.gitlens",
 				"mathematic.vscode-pdf",
+				"mechatroner.rainbow-csv",
 				"ms-azuretools.vscode-docker",
-				"streetsidesoftware.code-spell-checker",
-				"scalameta.metals",
+				"ms-python.python",
+				"ms-python.black-formatter",
 				"mtxr.sqltools",
-				"mtxr.sqltools-driver-mysql"
+				"mtxr.sqltools-driver-mysql",
+				"streetsidesoftware.code-spell-checker",
+				"scalameta.metals"
 			]
 		}
 	}

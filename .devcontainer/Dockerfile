@@ -128,6 +128,6 @@ RUN ./sdk.install.sh; \
     sdk install sbt; rm sdk.install.sh 
 
 COPY requirements.txt ./requirements.txt
-RUN pip3 install -r ./requirements.txt
+RUN pip3 install black; pip3 install -r ./requirements.txt
 
 ENTRYPOINT [ "/opt/entrypoint.sh" ]
